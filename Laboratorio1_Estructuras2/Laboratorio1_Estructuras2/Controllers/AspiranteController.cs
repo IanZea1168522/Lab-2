@@ -11,8 +11,10 @@ namespace Laboratorio1_Estructuras2.Controllers
     {
         public static AVL arbol = new AVL();
         public static List<Aspirante> listaAspi = new List<Aspirante>();
+        public static ArbolHuffman huffman = new ArbolHuffman();
         public IActionResult Index()
         {
+            huffman.arbol("23498781324941327890123456789012345678908793789347897895464879879869");
             return View("Index");
         }
         [Route("carga")]
@@ -63,14 +65,17 @@ namespace Laboratorio1_Estructuras2.Controllers
                         switch (instruccion.ToUpper())
                         {
                             case "INSERT":
+                                aspirante.dpi = huffman.Codificar(aspirante.dpi, huffman);
                                 arbol.Insertar(aspirante);
                                 break;
 
                             case "DELETE":
+                                aspirante.dpi = huffman.Codificar(aspirante.dpi, huffman);
                                 arbol.BuscaElimina(aspirante);
                                 break;
 
                             case "PATCH":
+                                aspirante.dpi = huffman.Codificar(aspirante.dpi, huffman);
                                 arbol.actual(aspirante);
                                 break;
 
