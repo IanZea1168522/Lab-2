@@ -68,7 +68,7 @@ namespace Laboratorio1_Estructuras2.Models
 
             return codigo;
         }
-        public static string Decodificar(string codigo, ArbolHuffman arbol)
+        public string Decodificar(string codigo, ArbolHuffman arbol)
         {
             NodoHuffman actual = arbol.raiz;
             string textoDecifrado = "";

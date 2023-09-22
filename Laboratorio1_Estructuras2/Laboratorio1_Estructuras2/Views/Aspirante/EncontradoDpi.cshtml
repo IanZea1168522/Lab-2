@@ -12,6 +12,7 @@
             <tr>
                 <th>nombre</th>
                 <th>dpi</th>
+                <th>empresas</th>
                 <th>fecha de nacimiento</th>
                 <th>dirección</th>
             </tr>
@@ -21,7 +22,8 @@
             {
                 <tr>
                     <td>@dato.nombre</td>
-                    <td>@dato.infoPriv[0]</td>
+                    <td>@dato.infoPriv[0]</td> 
+                    <td>@dato.infoPriv[1]</td>
                     <td>@dato.nacimiento</td>
                     <td>@dato.direccion</td>
                 </tr>
@@ -31,7 +33,7 @@
 }
 <br />
 <center>
-    <form method="post" action="@Url.Action("SubirDatos", "Aspirante")">
+    <form method="post" action="@Url.Action("SubirDatos2", "Aspirante")">
         <button type="submit" id="llamarMetodoBtn" name="llamarMetodoBtn" class="botonplano">Volver</button>
     </form>
 </center>

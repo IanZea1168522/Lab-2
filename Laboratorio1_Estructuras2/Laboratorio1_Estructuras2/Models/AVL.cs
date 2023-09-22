@@ -156,17 +156,6 @@
 
             return nodo;
         }
-        //se busca el menor
-        /*private Nodo Minimo(Nodo nodo)
-        {
-            Nodo actual = nodo;
-            while (actual.izquierda != null)
-            {
-                actual = actual.izquierda;
-            }
-            return actual;
-        }*/
-        //actualizar
         public void actual(Aspirante aspirante)
         {
             actualizar(aspirante, raiz);
@@ -179,7 +168,7 @@
                 {
                     for (int i = 0; i < nodo.lista.Count(); i++)
                     {
-                        if (nodo.lista[i].dpi == aspirante.dpi)
+                        if (nodo.lista[i].infoPriv[0] == aspirante.infoPriv[0])
                         {
                             nodo.lista[i] = aspirante;
                             break;

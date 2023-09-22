@@ -19,7 +19,7 @@
         public int altura { get; set; }
         public void borrar(Aspirante aspirante)
         {
-            lista.RemoveAll(Aspirante => Aspirante.dpi == aspirante.dpi);
+            lista.RemoveAll(Aspirante => Aspirante.infoPriv[0] == aspirante.infoPriv[0]);
         }
     }
 }

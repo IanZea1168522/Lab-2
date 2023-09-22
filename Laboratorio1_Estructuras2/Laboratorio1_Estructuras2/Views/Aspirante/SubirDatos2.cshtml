@@ -22,11 +22,11 @@
 <div>
     <h4>Buscar:</h4>
     <center>
-        <form method="post" action="@Url.Action("encontrado", "Aspirante")">
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre" />
+        <form method="post" action="@Url.Action("encontradoDpi", "Aspirante")">
+            <input type="text" id="nombre" name="nombre" placeholder="Dpi" />
             <input type="hidden" id="hiddennombre" name="nombre" value="" />
             <br />
-            <button type="submit" id="llamarMetodoBtn" name="llamarMetodoBtn" class="botonplano">Buscar por nombre</button>
+            <button type="submit" id="llamarMetodoBtn" name="llamarMetodoBtn" class="botonplano">Buscar por Dpi</button>
         </form>
     </center>
 </div>
@@ -38,7 +38,7 @@
         <thead>
             <tr>
                 <th>nombre</th>
-                <th>dpi</th>
+                <th>Datos confidenciales</th>
                 <th>fecha de nacimiento</th>
                 <th>dirección</th>
             </tr>
@@ -48,7 +48,7 @@
             {
                 <tr>
                     <td>@dato.nombre</td>
-                    <td>@dato.infoPriv[0]</td>
+                    <td>@dato.infoPriv[0]  @dato.infoPriv[1]</td>
                     <td>@dato.nacimiento</td>
                     <td>@dato.direccion</td>
                 </tr>
